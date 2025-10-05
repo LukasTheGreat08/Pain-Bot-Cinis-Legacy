@@ -1,0 +1,61 @@
+{
+  "version": "2025.0",
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 5.148596938775511,
+        "y": 2.9020089285714277
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 3.0742346938775524,
+        "y": 0.4769451530612243
+      },
+      "isLocked": false,
+      "linkedName": "Step 1 Blue Bot"
+    },
+    {
+      "anchor": {
+        "x": 1.1789540816326531,
+        "y": 0.8798788265306109
+      },
+      "prevControl": {
+        "x": 2.1993463010204075,
+        "y": 1.1382413903061193
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": "Step 2 Blue Bot"
+    }
+  ],
+  "rotationTargets": [],
+  "constraintZones": [],
+  "pointTowardsZones": [],
+  "eventMarkers": [
+    {
+      "name": "Elevator Reset",
+      "waypointRelativePos": 0.01,
+      "endWaypointRelativePos": null,
+      "command": null
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 4.0,
+    "maxAcceleration": 3.0,
+    "maxAngularVelocity": 540.0,
+    "maxAngularAcceleration": 720.0,
+    "nominalVoltage": 12.0,
+    "unlimited": false
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": 51.499346279654524
+  },
+  "reversed": false,
+  "folder": "Blue Score Bot Side",
+  "idealStartingState": {
+    "velocity": 0,
+    "rotation": 122.0053832080834
+  },
+  "useDefaultConstraints": true
+}

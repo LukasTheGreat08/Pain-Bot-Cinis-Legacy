@@ -1,0 +1,61 @@
+{
+  "version": "2025.0",
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 11.797002551020409,
+        "y": 4.013807397959183
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 11.281210140306122,
+        "y": -0.1255899234693878
+      },
+      "isLocked": false,
+      "linkedName": "Red Mid Step 1"
+    },
+    {
+      "anchor": {
+        "x": 16.263783482142856,
+        "y": 0.871484375
+      },
+      "prevControl": {
+        "x": 13.55424107142857,
+        "y": 1.5962053571428572
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": "Red Mid Step 2"
+    }
+  ],
+  "rotationTargets": [],
+  "constraintZones": [],
+  "pointTowardsZones": [],
+  "eventMarkers": [
+    {
+      "name": "Elevator Reset",
+      "waypointRelativePos": 0.01,
+      "endWaypointRelativePos": null,
+      "command": null
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 4.0,
+    "maxAcceleration": 3.0,
+    "maxAngularVelocity": 540.0,
+    "maxAngularAcceleration": 720.0,
+    "nominalVoltage": 12.0,
+    "unlimited": false
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": 125.81116392264116
+  },
+  "reversed": false,
+  "folder": "Red Mid",
+  "idealStartingState": {
+    "velocity": 0,
+    "rotation": -1.3019526725788753
+  },
+  "useDefaultConstraints": true
+}

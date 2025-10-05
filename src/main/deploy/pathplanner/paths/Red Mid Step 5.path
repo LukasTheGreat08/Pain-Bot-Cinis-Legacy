@@ -1,0 +1,54 @@
+{
+  "version": "2025.0",
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 16.184502551020408,
+        "y": 7.274585459183673
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 15.304003809439795,
+        "y": 6.377287942867947
+      },
+      "isLocked": false,
+      "linkedName": "Red Mid Step 4"
+    },
+    {
+      "anchor": {
+        "x": 13.729591836734693,
+        "y": 5.080835459183673
+      },
+      "prevControl": {
+        "x": 14.56226515614533,
+        "y": 5.889768520816662
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": null
+    }
+  ],
+  "rotationTargets": [],
+  "constraintZones": [],
+  "pointTowardsZones": [],
+  "eventMarkers": [],
+  "globalConstraints": {
+    "maxVelocity": 4.0,
+    "maxAcceleration": 3.0,
+    "maxAngularVelocity": 540.0,
+    "maxAngularAcceleration": 720.0,
+    "nominalVoltage": 12.0,
+    "unlimited": false
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": -121.25341927916959
+  },
+  "reversed": false,
+  "folder": "Red Mid",
+  "idealStartingState": {
+    "velocity": 0,
+    "rotation": -128.88449643371462
+  },
+  "useDefaultConstraints": true
+}

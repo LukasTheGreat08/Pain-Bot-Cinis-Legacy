@@ -1,0 +1,61 @@
+{
+  "version": "2025.0",
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 3.9799180327868857,
+        "y": 5.277715163934426
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 4.5427071906290895,
+        "y": 4.867813500303747
+      },
+      "isLocked": false,
+      "linkedName": "End of Score 2"
+    },
+    {
+      "anchor": {
+        "x": 0.7014030612244899,
+        "y": 7.438743622448979
+      },
+      "prevControl": {
+        "x": 0.4514112960664708,
+        "y": 7.621783650251015
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": "rizz"
+    }
+  ],
+  "rotationTargets": [],
+  "constraintZones": [],
+  "pointTowardsZones": [],
+  "eventMarkers": [
+    {
+      "name": "Elevator Reset",
+      "waypointRelativePos": 0.01,
+      "endWaypointRelativePos": null,
+      "command": null
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 4.0,
+    "maxAcceleration": 3.0,
+    "maxAngularVelocity": 540.0,
+    "maxAngularAcceleration": 720.0,
+    "nominalVoltage": 12.0,
+    "unlimited": false
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": -51.115503566285334
+  },
+  "reversed": false,
+  "folder": "Blue Score Top Side",
+  "idealStartingState": {
+    "velocity": 0,
+    "rotation": -58.9130124002059
+  },
+  "useDefaultConstraints": true
+}

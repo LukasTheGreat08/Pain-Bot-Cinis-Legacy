@@ -1,0 +1,54 @@
+{
+  "version": "2025.0",
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 7.155803571428571,
+        "y": 0.7931361607142855
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 6.150875945607757,
+        "y": 1.283388914913676
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 5.148596938775511,
+        "y": 2.9020089285714277
+      },
+      "prevControl": {
+        "x": 5.949799783896504,
+        "y": 1.795491329748641
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": "Step 1 Blue Bot"
+    }
+  ],
+  "rotationTargets": [],
+  "constraintZones": [],
+  "pointTowardsZones": [],
+  "eventMarkers": [],
+  "globalConstraints": {
+    "maxVelocity": 4.0,
+    "maxAcceleration": 3.0,
+    "maxAngularVelocity": 540.0,
+    "maxAngularAcceleration": 720.0,
+    "nominalVoltage": 12.0,
+    "unlimited": false
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": 122.0053832080834
+  },
+  "reversed": false,
+  "folder": "Blue Score Bot Side",
+  "idealStartingState": {
+    "velocity": 0,
+    "rotation": 180.0
+  },
+  "useDefaultConstraints": true
+}

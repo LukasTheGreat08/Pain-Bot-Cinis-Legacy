@@ -1,0 +1,54 @@
+{
+  "version": "2025.0",
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 0.7760204081632653,
+        "y": 7.520822704081633
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 1.2290853130558625,
+        "y": 7.234692081687759
+      },
+      "isLocked": false,
+      "linkedName": "End Of Intake 1"
+    },
+    {
+      "anchor": {
+        "x": 3.8720286885245896,
+        "y": 5.025973360655737
+      },
+      "prevControl": {
+        "x": 2.893064830593716,
+        "y": 5.025973360655737
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": "jjj"
+    }
+  ],
+  "rotationTargets": [],
+  "constraintZones": [],
+  "pointTowardsZones": [],
+  "eventMarkers": [],
+  "globalConstraints": {
+    "maxVelocity": 4.0,
+    "maxAcceleration": 3.0,
+    "maxAngularVelocity": 540.0,
+    "maxAngularAcceleration": 720.0,
+    "nominalVoltage": 12.0,
+    "unlimited": false
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": -58.9130124002059
+  },
+  "reversed": false,
+  "folder": "Blue Score Top Side",
+  "idealStartingState": {
+    "velocity": 0,
+    "rotation": -49.76364169072608
+  },
+  "useDefaultConstraints": true
+}
