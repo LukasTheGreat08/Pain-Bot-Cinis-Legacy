@@ -10,7 +10,7 @@ import edu.wpi.first.math.trajectory.TrapezoidProfile;
 
 
 public final class Constants {
-   
+
     public static final Pose2d OPTIMAL_SCORING_POSE_LEFT = new Pose2d(1.5, 2.0, Rotation2d.fromDegrees(90));
     public static final Pose2d OPTIMAL_SCORING_POSE_RIGHT = new Pose2d(1.5, -2.0, Rotation2d.fromDegrees(90));
 
@@ -18,7 +18,7 @@ public final class Constants {
         public static final int DRIVE_CONTROLLER_PORT = 0;
         public static final int BUTTON_BOX_PORT = 1;
     }
-    
+
     public static final class HopperPivot {
         //775pro on top of hopper
         public static final int MOTOR_ID = 44; // fixed
@@ -27,36 +27,42 @@ public final class Constants {
     public static final class AidenBarriosMechanism {
             public static final int SERVO_PWM_PORT = 0;//maybe fix
     }
-    
-    
-    
+
+    public static final class ABM {
+        public static final int MOTOR_ID = 28;
+        public static final double DEPLOY_SPEED = 0.3;
+        public static final double RETRACT_SPEED = -0.3;
+    }
+
+
+
     public static final class AidenBarriosOtherMechanism {
        //climb motor
         public static final int MOTOR_ID = 35;//fixed
-        
-        
+
+
         public static final double FIRE_POWER = .75;
-        
-        
+
+
         public static final double REVERSE_POWER = -.75;
     }
 
     public static final class Elevator {
-    
+
         public static final int LEFT_MOTOR_ID = 1;
         public static final int RIGHT_MOTOR_ID = 2;
 
-        
+
         public static final double HEIGHT_PER_ROTATION = 0.05;  // Example: 5 cm per rotation
 
         //PSA: these are in meters
-        public static final double HEIGHT_RESET = 0.0;   
-        public static final double HEIGHT_L1 = 0.325;       
-        public static final double HEIGHT_L2 = 0.69;       
-        public static final double HEIGHT_L3 = 1.28;       
-        public static final double HEIGHT_L4 = 2.236;       
+        public static final double HEIGHT_RESET = 0.0;
+        public static final double HEIGHT_L1 = 0.325;
+        public static final double HEIGHT_L2 = 0.69;
+        public static final double HEIGHT_L3 = 1.28;
+        public static final double HEIGHT_L4 = 2.236;
 
-        
+
     }
 
 
@@ -80,17 +86,17 @@ public final class Constants {
         public static final int BACK_RIGHT_TURN_ID     = 13;
         public static final int BACK_RIGHT_CANCODER_ID = 14;
 
-    
+
         public static final double FRONT_LEFT_OFFSET_DEG  = 113.29092;
         public static final double FRONT_RIGHT_OFFSET_DEG = -108.28116;
         public static final double BACK_LEFT_OFFSET_DEG   = 72.94932;
         public static final double BACK_RIGHT_OFFSET_DEG  = 112.5;
 
-    
+
         public static final int PIGEON_ID = 58; //good!
 
         // meters
-        public static final double WHEEL_DIAMETER_METERS = 0.1016; // 4 inches 
+        public static final double WHEEL_DIAMETER_METERS = 0.1016; // 4 inches
         public static final double WHEEL_CIRCUMFERENCE = WHEEL_DIAMETER_METERS * Math.PI;
         public static final double TRACK_WIDTH = 0.6096; //24 inches
         public static final double WHEEL_BASE  = 0.6096; //24 inches (maybe fix)
@@ -121,15 +127,14 @@ public final class Constants {
             new Translation2d(-WHEEL_BASE / 2.0, -TRACK_WIDTH / 2.0)   // Back Right
         );
     }
-        
+
     public static final class HopperShooter {
         //fix all these!!!! **************************************************
         public static final int HOPPER_LEFT_MOTOR_ID = 21;
         public static final int HOPPER_RIGHT_MOTOR_ID = 20;
-        public static final int SHOOTER_LEFT_MOTOR_ID = 28;
         public static final int SHOOTER_RIGHT_MOTOR_ID = 25;
-        
-        
+
+
         public static final int RANGE_SENSOR_ID = 17;
 
         public static final double INTAKE_POWER = 0.05;
@@ -138,11 +143,7 @@ public final class Constants {
         public static final double REWIND_POWER = 0.25;
         public static final double L1FIRE = 0.2575;
 
-        
+
         public static final double CORAL_DETECT_THRESHOLD = 0.1; //m
     }
 }
-
-
-    
-

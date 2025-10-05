@@ -27,6 +27,7 @@ import frc.robot.commands.ReverseAidenBarriosMechanismCommand;
 import frc.robot.commands.ReverseAidenBarriosOtherMechanismCommand;
 import frc.robot.commands.RunAidenBarriosMechanismCommand;
 import frc.robot.commands.RunAidenBarriosOtherMechanismCommand;
+import frc.robot.commands.ToggleABMCommand;
 import frc.robot.commands.ElevatorPresetCommand;
 import frc.robot.commands.ElevatorResetCommand;
 import frc.robot.commands.HopperIntake;
@@ -47,6 +48,7 @@ import frc.robot.subsystems.ElevatorSubsystem;
 import frc.robot.subsystems.HopperPivotSubsystem;
 import frc.robot.subsystems.HopperShooterSubsystem;
 import frc.robot.subsystems.LimelightSubsystem;
+import frc.robot.subsystems.ABMSubsystem;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
@@ -108,7 +110,8 @@ public class RobotContainer {
     private final AidenBarriosMechanismSubsystem m_mechanism = new AidenBarriosMechanismSubsystem();
     private final AidenBarriosOtherMechanism m_otherMechanism = new AidenBarriosOtherMechanism();
     private final LimelightSubsystem m_rizz = new LimelightSubsystem();
-    
+    private final ABMSubsystem m_abmSubsystem = new ABMSubsystem();
+
     /* Path follower */
     private final SendableChooser<Command> autoChooser;
 
@@ -122,7 +125,7 @@ public class RobotContainer {
         autoChooser = AutoBuilder.buildAutoChooser("Tests");
         SmartDashboard.putData("Auto Mode", autoChooser);
 
-        
+
         configureBindings();
     }
 
@@ -131,7 +134,7 @@ public class RobotContainer {
         // and Y is defined as to the left according to WPILib convention.
         drivetrain.setDefaultCommand(
             // Drivetrain will execute this command periodically
-            
+
             drivetrain.applyRequest(() ->
                 drive.withVelocityX(joystick.getLeftY() * MaxSpeed) // Drive forward with negative Y (forward)
                     .withVelocityY(joystick.getLeftX() * MaxSpeed) // Drive left with negative X (left)
@@ -139,7 +142,7 @@ public class RobotContainer {
             )
         );
 
-        
+
 
 
         joystick.pov(0).whileTrue(drivetrain.applyRequest(() ->
@@ -168,7 +171,7 @@ public class RobotContainer {
             .whileTrue(new HopperRewindCommand(m_hopperShooterSubsystem));
         new JoystickButton(m_buttonBox, 4)
             .whileTrue(new L1FireCommand(m_hopperShooterSubsystem));
-        
+
         // Elevator presets
         new JoystickButton(m_buttonBox, 10)
             .onTrue(new ElevatorResetCommand(m_elevatorSubsystem));
@@ -180,7 +183,7 @@ public class RobotContainer {
             .onTrue(new ElevatorPresetCommand(m_elevatorSubsystem, Constants.Elevator.HEIGHT_L3));
         new JoystickButton(m_buttonBox, 9)
             .onTrue(new ElevatorPresetCommand(m_elevatorSubsystem, Constants.Elevator.HEIGHT_L4));
-        
+
         // Pivot commands
         new JoystickButton(m_buttonBox, 11)
             .whileTrue(new RunAidenBarriosOtherMechanismCommand(m_otherMechanism)); //into chassis
@@ -193,15 +196,17 @@ public class RobotContainer {
             //.onTrue(new AutoAlignRightCommand(drivetrain,m_rizz));
 
             //FORBIDDEN TECH DO NOT TOUCH
-        
 
 
-            
 
-        
+
+
         //aiden barrios's mechanisms
         joystick.x().whileTrue(new RunAidenBarriosMechanismCommand(m_mechanism));
         joystick.y().whileTrue(new ReverseAidenBarriosMechanismCommand(m_mechanism));
+
+        // New ABM mapping
+        joystick.b().onTrue(new ToggleABMCommand(m_abmSubsystem));
     }
 
     public Command getAutonomousCommand() {
