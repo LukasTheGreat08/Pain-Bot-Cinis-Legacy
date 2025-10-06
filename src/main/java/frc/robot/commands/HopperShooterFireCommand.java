@@ -15,7 +15,6 @@ public class HopperShooterFireCommand extends Command {
     @Override
     public void execute() {
         m_subsystem.runShooter(Constants.HopperShooter.FIRE_POWER);
-        
     }
 
     @Override
@@ -29,5 +28,3 @@ public class HopperShooterFireCommand extends Command {
         m_subsystem.stopShooter();
     }
 }
-
-

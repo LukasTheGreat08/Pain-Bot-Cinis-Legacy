@@ -11,39 +11,28 @@ public class HopperShooterSubsystem extends SubsystemBase {
 
     private final TalonFX m_hopperLeft;
     private final TalonFX m_hopperRight;
-
-
     private final TalonFX m_shooterRight;
-
-    // CTRE CANrange sensor
     private final CANrange m_rangeSensor;
 
     public HopperShooterSubsystem() {
-
         m_hopperLeft  = new TalonFX(Constants.HopperShooter.HOPPER_LEFT_MOTOR_ID, "rio");
         m_hopperRight = new TalonFX(Constants.HopperShooter.HOPPER_RIGHT_MOTOR_ID, "rio");
-
-
         m_shooterRight = new TalonFX(Constants.HopperShooter.SHOOTER_RIGHT_MOTOR_ID, "rio");
-
-
         m_rangeSensor = new CANrange(Constants.HopperShooter.RANGE_SENSOR_ID, "rio");
     }
 
-
     public void runIntake(double hopper_power, double shooter_power) {
-        m_hopperLeft.setControl(new DutyCycleOut(-hopper_power));
+        m_hopperLeft.setControl(new DutyCycleOut(hopper_power)); // Reversed direction
         m_hopperRight.setControl(new DutyCycleOut(-hopper_power));
         m_shooterRight.setControl(new DutyCycleOut(-shooter_power));
     }
-
 
     public void runShooter(double power) {
         m_shooterRight.setControl(new DutyCycleOut(-power));
     }
 
     public void runHopper(double power){
-        m_hopperLeft.setControl(new DutyCycleOut(-power));
+        m_hopperLeft.setControl(new DutyCycleOut(power)); // Reversed direction
         m_hopperRight.setControl(new DutyCycleOut(-power));
     }
 
@@ -51,13 +40,11 @@ public class HopperShooterSubsystem extends SubsystemBase {
         m_shooterRight.setControl(new DutyCycleOut(-power));
     }
 
-
     public void runRewind(double power) {
-        m_hopperLeft.setControl(new DutyCycleOut(power));
+        m_hopperLeft.setControl(new DutyCycleOut(-power)); // Reversed direction
         m_hopperRight.setControl(new DutyCycleOut(power));
         m_shooterRight.setControl(new DutyCycleOut(power));
     }
-
 
     public void stopAll() {
         m_hopperLeft.setControl(new NeutralOut());
@@ -65,11 +52,9 @@ public class HopperShooterSubsystem extends SubsystemBase {
         m_shooterRight.setControl(new NeutralOut());
     }
 
-
     public void stopShooter() {
         m_shooterRight.setControl(new NeutralOut());
     }
-
 
     public double getDistance() {
         return m_rangeSensor.getDistance().getValueAsDouble();

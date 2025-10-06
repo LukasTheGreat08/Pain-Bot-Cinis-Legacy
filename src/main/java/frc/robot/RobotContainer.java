@@ -34,6 +34,7 @@ import frc.robot.commands.HopperIntake;
 import frc.robot.commands.HopperRewindCommand;
 import frc.robot.commands.HopperShooterFireCommand;
 import frc.robot.commands.HopperShooterIntakeCommand;
+import frc.robot.commands.HopperShooterRewindCommand;
 import frc.robot.commands.L1FireCommand;
 import frc.robot.commands.L1ScoreMacroCommand;
 import frc.robot.commands.L4ScoreMacroCommand;
@@ -155,9 +156,12 @@ public class RobotContainer {
 
         // reset the field-centric heading on left bumper press
         joystick.leftBumper().onTrue(drivetrain.runOnce(() -> drivetrain.seedFieldCentric()));
-        joystick.a().whileTrue(new HopperShooterIntakeCommand(m_hopperShooterSubsystem));
-        joystick.rightTrigger().whileTrue(new HopperShooterFireCommand(m_hopperShooterSubsystem));
-        joystick.leftTrigger().whileTrue(new HopperIntake(m_hopperShooterSubsystem));
+        
+        // Hopper Shooter Commands
+        joystick.rightTrigger().whileTrue(new HopperShooterIntakeCommand(m_hopperShooterSubsystem));
+        joystick.leftTrigger().whileTrue(new HopperShooterRewindCommand(m_hopperShooterSubsystem));
+        joystick.a().whileTrue(new HopperShooterFireCommand(m_hopperShooterSubsystem));
+
 
         drivetrain.registerTelemetry(logger::telemeterize);
 

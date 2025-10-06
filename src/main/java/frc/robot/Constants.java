@@ -29,9 +29,9 @@ public final class Constants {
     }
 
     public static final class ABM {
-        public static final int MOTOR_ID = 28;
-        public static final double DEPLOY_SPEED = 0.3;
-        public static final double RETRACT_SPEED = -0.3;
+        public static final int MOTOR_ID = 25;
+        public static final double DEPLOY_SPEED = 0.7;
+        public static final double RETRACT_SPEED = -0.7;
     }
 
 
@@ -132,15 +132,15 @@ public final class Constants {
         //fix all these!!!! **************************************************
         public static final int HOPPER_LEFT_MOTOR_ID = 21;
         public static final int HOPPER_RIGHT_MOTOR_ID = 20;
-        public static final int SHOOTER_RIGHT_MOTOR_ID = 25;
+        public static final int SHOOTER_RIGHT_MOTOR_ID = 28;
 
 
         public static final int RANGE_SENSOR_ID = 17;
 
-        public static final double INTAKE_POWER = 0.05;
-        public static final double INTAKE_HOPPER_POWER = 0.85;
+        public static final double INTAKE_POWER = 0.4;
+        public static final double INTAKE_HOPPER_POWER = 0.65;
         public static final double FIRE_POWER   = 0.2;
-        public static final double REWIND_POWER = 0.25;
+        public static final double REWIND_POWER = 0.2;
         public static final double L1FIRE = 0.2575;
 
 

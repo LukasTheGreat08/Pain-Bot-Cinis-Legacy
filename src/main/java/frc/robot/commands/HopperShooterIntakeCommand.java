@@ -14,13 +14,11 @@ public class HopperShooterIntakeCommand extends Command {
 
     @Override
     public void execute() {
-        
         m_subsystem.runIntake(Constants.HopperShooter.INTAKE_HOPPER_POWER, Constants.HopperShooter.INTAKE_POWER);
     }
 
     @Override
     public boolean isFinished() {
-        
         return m_subsystem.getDistance() < Constants.HopperShooter.CORAL_DETECT_THRESHOLD;
     }
 
