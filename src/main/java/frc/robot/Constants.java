@@ -59,7 +59,7 @@ public final class Constants {
         public static final double HEIGHT_RESET = 0.0;
         public static final double HEIGHT_L1 = 0.325;
         public static final double HEIGHT_L2 = 0.69;
-        public static final double HEIGHT_L3 = 1.28;
+        public static final double HEIGHT_L3 = 1.6;
         public static final double HEIGHT_L4 = 2.236;
 
 
@@ -139,7 +139,7 @@ public final class Constants {
 
         public static final double INTAKE_POWER = 0.4;
         public static final double INTAKE_HOPPER_POWER = 0.65;
-        public static final double FIRE_POWER   = 0.2;
+        public static final double FIRE_POWER   = 2;
         public static final double REWIND_POWER = 0.2;
         public static final double L1FIRE = 0.2575;
 
